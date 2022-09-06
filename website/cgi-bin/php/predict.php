@@ -1,5 +1,6 @@
 <?php
-
+	//this script calls the flask API
+	//who invokes it?
 	$sl = $_POST['sl'];
 	$sw = $_POST['sw'];
 	$pl = $_POST['pl'];
