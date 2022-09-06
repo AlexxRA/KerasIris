@@ -1,6 +1,7 @@
 
 function predict(){
 	//text input boxes
+	//[ALEX] Here it reads the values from the form in html
 	sl_fn = document.getElementById("sl"),
 	sl = sl_fn.value;
 	sw_fn = document.getElementById("sw"),
@@ -15,9 +16,12 @@ function predict(){
 	versicolor_fn = document.getElementById("versicolor");
 	virginica_fn = document.getElementById("virginica");
 	
+	//[ALEX] Here the client calls to the backend (in this case is a php file, simple without installing axios,
+	//	using apache server
+	//) 
 	$.ajax({
 		type: "POST",
-		url: "../cgi-bin/php/predict.php",
+		url: "../cgi-bin/php/predict.php",//is in that child folder, same root folder (website)
 		async: false,
 		datatype: 'json',
 		data: {
